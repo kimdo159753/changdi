@@ -1,0 +1,113 @@
+/* static/css/style.css */
+
+/* 전체적인 폰트와 배경 설정 */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px 0; 
+
+    /* 배경 이미지 */
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* 전체 컨테이너 */
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px;
+    padding: 15px;
+    
+    background-color: rgba(255, 255, 255, 0.9);
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 1. 헤더 */
+header {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 1.6em;
+}
+
+/* 2. 감정 분석 섹션 */
+.analysis-section {
+    text-align: center;
+}
+
+/* 폼 버튼 스타일 */
+#emotion-form button {
+    display: block;
+    width: 100%;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#emotion-form button:hover {
+    background-color: #2980b9;
+}
+
+/* 3. 결과 섹션 */
+.result-section {
+    margin-top: 20px; 
+}
+
+/* 감정 결과 */
+#emotion-result {
+    padding: 0;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.0em;
+}
+
+#detected-emotion {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #0056b3;
+}
+
+/* 음악 추천 목록 */
+#music-recommendations {
+    margin-top: 15px;
+}
+
+#song-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#song-list li {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding: 10px 5px;
+    margin-bottom: 0;
+}
+
+#song-list li:last-child {
+    border-bottom: none;
+}

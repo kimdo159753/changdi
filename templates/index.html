@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Music Curator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🎵 AI Music Curator</h1>
+        </header>
+
+        <main>
+            <section class="analysis-section">
+                <form id="emotion-form">
+                    <button type="button" id="webcam-btn">웹캠으로 분석하기</button>
+                </form>
+            </section>
+
+            <section class="result-section">
+                
+                <div id="emotion-result">
+                    <p><strong>분석된 감정:</strong> <span id="detected-emotion">(분석 대기 중)</span></p>
+                </div>
+                
+                <div id="music-recommendations">
+                    <ul id="song-list">
+                        <li>(추천 음악이 여기에 표시됩니다)</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
