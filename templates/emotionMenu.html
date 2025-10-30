@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Emotion Menu{% endblock %}
+
+{% block content %}
+    <h1>😊 Emotion Menu</h1>
+    <p>당신의 감정을 기록하고 확인해보세요.</p>
+    
+    <ul class="item-list">
+        <li><a href="{{ url_for('today') }}">✏️ 오늘의 감정 기록하기</a></li>
+        <li><a href="{{ url_for('monthly') }}">📊 월간 통계 보기</a></li>
+    </ul>
+{% endblock %}

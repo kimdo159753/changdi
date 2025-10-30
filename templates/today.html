@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Today's Emotion{% endblock %}
+
+{% block content %}
+    <h1>✏️ Today's Emotion</h1>
+    <p>오늘 하루는 어땠나요?</p>
+    
+    <form>
+        <div style="margin-bottom: 1rem;">
+            <label for="emotion-select">오늘의 감정:</label>
+            <select id="emotion-select" style="padding: 0.5rem; font-size: 1rem;">
+                <option value="happy">😄 행복</option>
+                <option value="calm">😌 차분</option>
+                <option value="sad">😢 슬픔</option>
+                <option value="angry">😠 화남</option>
+            </select>
+        </div>
+        <div style="margin-bottom: 1rem;">
+            <label for="journal" style="display: block; margin-bottom: 0.5rem;">
+                간단한 일기:
+            </label>
+            <textarea id="journal" rows="5" style="width: 100%; padding: 0.5rem; font-family: inherit;"></textarea>
+        </div>
+        <button type="submit" class="btn">저장하기</button>
+    </form>
+{% endblock %}

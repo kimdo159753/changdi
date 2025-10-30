@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}My Playlist{% endblock %}
+
+{% block content %}
+    <h1>🎧 My Playlist</h1>
+    <p>내가 저장한 곡 목록입니다.</p>
+
+    <ul class="item-list">
+        <li><a href="{{ url_for('music', title='Dynamite') }}">Dynamite - BTS</a></li>
+        <li><a href="{{ url_for('music', title='Levitating') }}">Levitating - Dua Lipa</a></li>
+        <li><a href="{{ url_for('music', title='Blinding_Lights') }}">Blinding Lights - The Weeknd</a></li>
+    </ul>
+{% endblock %}

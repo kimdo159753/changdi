@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{ current_title }}{% endblock %}
+
+{% block content %}
+    <h1>🎶 Now Playing: {{ current_title }}</h1>
+    
+    <p>이곳에 '{{ current_title }}' 곡의 상세 정보, 가사, 앨범 아트 등이 표시됩니다.</p>
+    
+    <div class="placeholder-box">
+        [ Music Player Interface ]
+    </div>
+
+    <br>
+    <a href="{{ url_for('playlist') }}" class="btn">← 플레이리스트로 돌아가기</a>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Music Menu{% endblock %}
+
+{% block content %}
+    <h1>🎵 Music Menu</h1>
+    <p>환영합니다! 음악 메뉴에서 원하는 기능을 선택하세요.</p>
+    
+    <ul class="item-list">
+        <li><a href="{{ url_for('playlist') }}">🎧 내 플레이리스트 보기</a></li>
+        <li><a href="{{ url_for('music', title='sample_song_1') }}">🎶 샘플 곡 1 재생하기</a></li>
+        <li><a href="{{ url_for('music', title='sample_song_2') }}">🎶 샘플 곡 2 재생하기</a></li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- (가장 중요!)
+         이 부분이 /static/style.css 파일을 불러오는 코드입니다. 
+    -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <!-- 각 페이지의 제목이 여기에 들어옵니다. -->
+    <title>{% block title %}My App{% endblock %}</title>
+</head>
+<body>
+    
+    <!-- 공통 내비게이션 바 -->
+    <nav>
+        <a href="{{ url_for('musicMenu') }}">🎵 Music</a>
+        <a href="{{ url_for('emotionMenu') }}">😊 Emotion</a>
+    </nav>
+
+    <!-- 메인 콘텐츠 영역 -->
+    <main class="container">
+        
+        <!-- (중요!)
+             musicMenu.html 같은 자식 템플릿의 내용이
+             이 'content' 블록 안에 채워집니다.
+        -->
+        {% block content %}
+        {% endblock %}
+        
+    </main>
+
+</body>
+</html>
+
